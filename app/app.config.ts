@@ -9,8 +9,8 @@ export default defineAppConfig({
 	...homepageConfig,
 
 	footer: [
-		`© ${new Date().getFullYear()} 纸鹿本鹿 (L33Z22L11)`,
-		h('a', { href: 'https://beian.miit.gov.cn/', target: '_blank', rel: 'noopener nofollow' }, '陕ICP备2025082251号'),
+		`© ${new Date().getFullYear()} 筱序二十`,
+		h('a', { href: 'https://icp.gov.moe/?keyword=20256101', target: '_blank', rel: 'noopener nofollow' }, '萌ICP备20256101号'),
 	],
 
 	// 用于在主页展示下游引用
@@ -57,7 +57,6 @@ export default defineAppConfig({
 		},
 		{
 			img: 'https://wsrv.nl/?url=github.com/scfcn.png%3fsize=92',
-			link: 'https://www.qxzhan.cn/',
 			text: '筱序二十',
 		},
 		{
@@ -81,9 +80,9 @@ export default defineAppConfig({
 		{
 			title: '社交',
 			items: [
-				{ icon: 'ri:qq-line', text: '群: 169994096', url: 'https://jq.qq.com/?_wv=1027&k=lQfNSeEd' },
-				{ icon: 'ri:mail-line', text: 'hi@zhilu.cyou', url: 'mailto:hi@zhilu.cyou' },
-				{ icon: 'ri:github-line', text: 'Github', url: 'https://github.com/L33Z22L11' },
+				{ icon: 'ri:qq-line', text: '群: 665751334', url: 'https://qm.qq.com/q/gOTblcp6mW' },
+				{ icon: 'ri:mail-line', text: 'qxbk@qq.com', url: 'mailto:qxbk@qq.com' },
+				{ icon: 'ri:github-line', text: 'Github', url: 'https://github.com/scfcn' },
 			],
 		},
 	] satisfies Nav,
