@@ -15,14 +15,14 @@ const isTimeDiffSignificant = (updated: string, published: string) => {
 <template>
 <ZRawLink class="article-card" :to="link.$href || id">
 	<div class="article-header">
-		<ZDate v-if="updated && isTimeDiffSignificant(updated, published)" class="article-date" :date="updated" />
-		<ZDate class="article-date" :date="published" />
+		<ZDate v-if="updated && published && isTimeDiffSignificant(updated, published)" class="article-date" :date="updated" />
+		<ZDate v-if="published" class="article-date" :date="published" />
 	</div>
 	<h2 class="article-title">
-		{{ typeof title === 'string' ? title : title._ }}
+		{{ typeof title === 'object' && title?._ ? title._ : title || '无标题' }}
 	</h2>
 	<p class="article-descrption">
-		{{ typeof summary === 'string' ? summary : summary._ }}
+		{{ typeof summary === 'object' && summary?._ ? summary._ : summary || '无摘要' }}
 	</p>
 </ZRawLink>
 </template>

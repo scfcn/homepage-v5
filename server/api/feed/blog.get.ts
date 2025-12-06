@@ -35,6 +35,8 @@ export default defineCachedEventHandler(async (_event) => {
 		
 		// 转换RSS格式为期望的Atom格式结构
 		return items.map((item: any) => {
+			if (!item) return null
+				
 			// 处理category字段，确保符合FeedProps接口
 			let categories = item.category || []
 			// 如果是字符串，转换为数组
@@ -59,16 +61,22 @@ export default defineCachedEventHandler(async (_event) => {
 				categories = []
 			}
 			
+			// 获取标题和摘要文本
+			const titleText = item.title?._ || item.title || ''
+			const summaryText = item.description?._ || item.description || ''
+			const linkText = item.link?._ || item.link || ''
+			const pubDateText = item.pubDate?._ || item.pubDate || ''
+			
 			return {
-				title: { _: item.title?._ || item.title || '' },
-				link: { $href: item.link?._ || item.link || '' },
-				id: item.guid?._ || item.guid || item.link?._ || item.link || '',
-				published: item.pubDate?._ || item.pubDate || '',
-				updated: item.pubDate?._ || item.pubDate || '',
-				summary: { _: item.description?._ || item.description || '' },
+				title: titleText,
+				link: { $href: linkText },
+				id: item.guid?._ || item.guid || linkText,
+				published: pubDateText,
+				updated: pubDateText,
+				summary: summaryText,
 				category: categories
 			}
-		})
+		}).filter(Boolean) // 过滤掉null值
 	} catch (error) {
 		console.error('Error fetching or parsing blog feed:', error)
 		return []
