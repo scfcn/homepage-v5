@@ -37,6 +37,10 @@ const articles = computed(() => data.value.slice(0, 11))
 		<Icon name="ri:archive-line" />
 		<span>归档</span>
 	</ZRawLink>
+	<ZRawLink to="/api/feed/article" rel="alternate" type="application/rss+xml">
+		<Icon name="ri:rss-line" />
+		<span>订阅</span>
+	</ZRawLink>
 </div>
 </template>
 

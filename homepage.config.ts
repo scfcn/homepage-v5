@@ -18,7 +18,7 @@ const homepageConfig = {
 	timezone: 'Asia/Shanghai',
 	favicon: '/favicon.ico',
 	url: 'https://me.qxzhan.cn/',
-	blogAtom: 'https://qxzhan.cn/feed/atom/',
+	blogAtom: 'https://qxzhan.cn/feed/',
 }
 
 // https://nitro.build/config#routerules

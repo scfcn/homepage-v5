@@ -68,6 +68,7 @@ export default defineAppConfig({
 				{ icon: 'ri:qq-line', text: '群: 665751334', url: 'https://qm.qq.com/q/gOTblcp6mW' },
 				{ icon: 'ri:mail-line', text: 'qxbk@qq.com', url: 'mailto:qxbk@qq.com' },
 				{ icon: 'ri:github-line', text: 'Github', url: 'https://github.com/scfcn' },
+				{ icon: 'ri:telegram-line', text: 'Telegram', url: 'https://t.me/qxuzh' },
 			],
 		},
 	] satisfies Nav,
