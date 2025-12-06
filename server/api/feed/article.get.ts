@@ -1,8 +1,19 @@
+import { XMLParser } from 'fast-xml-parser'
 import homepageConfig from '~~/homepage.config'
 
 export default defineCachedEventHandler(async (event) => {
-  // 获取博客文章数据
-  const blogFeed = await $fetch('/api/feed/blog')
+  // 直接获取并解析博客文章数据，避免内部API调用
+  const parser = new XMLParser({
+    attributeNamePrefix: '$',
+    cdataPropName: '$',
+    ignoreAttributes: false,
+    isArray: name => name === 'entry' || name === 'category',
+    textNodeName: '_',
+  })
+
+  const resp = await fetch(homepageConfig.blogAtom)
+  const objAtom = parser.parse(await resp.text())
+  const blogFeed = objAtom.feed?.entry || []
   
   // 获取请求URL，用于构建完整的链接
   const protocol = event.node.req.headers['x-forwarded-proto'] || 'http'
