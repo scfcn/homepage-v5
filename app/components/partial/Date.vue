@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { differenceInWeeks, isSameYear } from 'date-fns'
+import { differenceInWeeks, isSameYear, format } from 'date-fns'
 import { toDate } from 'date-fns-tz'
 
 const props = defineProps<{
@@ -18,6 +18,11 @@ const relative = computed(() => props.absolute
 	? false
 	: props.relative || Math.abs(differenceInWeeks(Date.now(), datetime.value)) < 1,
 )
+
+// 格式化日期时间为本地格式
+const getLocaleDatetime = (date: Date) => {
+	return format(date, 'yyyy-MM-dd HH:mm:ss')
+}
 
 const mounted = ref(false)
 const tooltip = computed(() => mounted.value ? `${props.tipPrefix || ''}${getLocaleDatetime(datetime.value)}` : undefined)

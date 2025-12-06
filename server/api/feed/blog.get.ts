@@ -34,15 +34,41 @@ export default defineCachedEventHandler(async (_event) => {
 		const items = objRss.rss.channel.item || []
 		
 		// 转换RSS格式为期望的Atom格式结构
-		return items.map((item: any) => ({
-			title: { _: item.title?._ || item.title || '' },
-			link: { $href: item.link?._ || item.link || '' },
-			id: item.guid?._ || item.guid || item.link?._ || item.link || '',
-			published: item.pubDate?._ || item.pubDate || '',
-			updated: item.pubDate?._ || item.pubDate || '',
-			summary: { _: item.description?._ || item.description || '' },
-			category: item.category || []
-		}))
+		return items.map((item: any) => {
+			// 处理category字段，确保符合FeedProps接口
+			let categories = item.category || []
+			// 如果是字符串，转换为数组
+			if (typeof categories === 'string') {
+				categories = [{ $term: categories, $scheme: '' }]
+			}
+			// 如果是对象数组，转换为期望的格式
+			else if (Array.isArray(categories)) {
+				categories = categories.map((cat: any) => {
+					if (typeof cat === 'string') {
+						return { $term: cat, $scheme: '' }
+					}
+					// 如果是对象，提取$term和$scheme
+					return {
+						$term: cat._ || cat.$term || '',
+						$scheme: cat.$scheme || ''
+					}
+				})
+			}
+			// 其他情况，返回空数组
+			else {
+				categories = []
+			}
+			
+			return {
+				title: { _: item.title?._ || item.title || '' },
+				link: { $href: item.link?._ || item.link || '' },
+				id: item.guid?._ || item.guid || item.link?._ || item.link || '',
+				published: item.pubDate?._ || item.pubDate || '',
+				updated: item.pubDate?._ || item.pubDate || '',
+				summary: { _: item.description?._ || item.description || '' },
+				category: categories
+			}
+		})
 	} catch (error) {
 		console.error('Error fetching or parsing blog feed:', error)
 		return []
