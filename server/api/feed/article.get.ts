@@ -7,18 +7,16 @@ export default defineCachedEventHandler(async (event) => {
     attributeNamePrefix: '$',
     cdataPropName: '$',
     ignoreAttributes: false,
-    isArray: name => name === 'entry' || name === 'category',
+    isArray: name => name === 'item' || name === 'category',
     textNodeName: '_',
   })
 
   const resp = await fetch(homepageConfig.blogAtom)
-  const objAtom = parser.parse(await resp.text())
-  const blogFeed = objAtom.feed?.entry || []
+  const objRss = parser.parse(await resp.text())
+  const blogFeed = objRss.rss?.channel?.item || []
   
   // 获取请求URL，用于构建完整的链接
-  const protocol = event.node.req.headers['x-forwarded-proto'] || 'http'
-  const host = event.node.req.headers.host || homepageConfig.url
-  const baseUrl = `${protocol}://${host}`
+  const baseUrl = homepageConfig.url
   
   // 生成当前时间的RFC 822格式
   const now = new Date()
@@ -34,25 +32,26 @@ export default defineCachedEventHandler(async (event) => {
  xmlns:wfw="http://wellformedweb.org/CommentAPI/">
 <channel>
 <title>${homepageConfig.title} - 文章</title>
-<link>${baseUrl}/article</link>
-<atom:link href="${baseUrl}/api/feed/article" rel="self" type="application/rss+xml" />
+<link>${new URL('/article', baseUrl).href}</link>
+<atom:link href="${new URL('/api/feed/article', baseUrl).href}" rel="self" type="application/rss+xml" />
 <language>${homepageConfig.language}</language>
 <description>${homepageConfig.description}</description>
 <lastBuildDate>${pubDate}</lastBuildDate>
 <pubDate>${pubDate}</pubDate>
 ${blogFeed.map((article: any) => {
   // 确保文章发布日期是RFC 822格式
-  const articlePubDate = new Date(article.published).toUTCString()
+  const articlePubDate = new Date(article.pubDate || article.published).toUTCString()
   
   return `<item>
 <title>${article.title._ || article.title}</title>
-<link>${article.link.$href}</link>
-<guid>${article.link.$href}</guid>
+<link>${article.link._ || article.link}</link>
+<guid>${article.guid._ || article.guid}</guid>
 <pubDate>${articlePubDate}</pubDate>
-<dc:creator>${homepageConfig.author.name}</dc:creator>
-<description><![CDATA[${article.summary._ || article.summary}]]></description>
-<slash:comments>0</slash:comments>
-<comments>${article.link.$href}#comments</comments>
+<dc:creator>${article['dc:creator']._ || article['dc:creator'] || homepageConfig.author.name}</dc:creator>
+<description><![CDATA[${article.description._ || article.description || ''}]]></description>
+${article['content:encoded'] ? `<content:encoded xml:lang="${homepageConfig.language}"><![CDATA[${article['content:encoded']._ || article['content:encoded']}]]></content:encoded>` : ''}
+<slash:comments>${article['slash:comments'] || 0}</slash:comments>
+<comments>${article.comments || (article.link._ || article.link) + '#comments'}</comments>
 <wfw:commentRss>${homepageConfig.blogAtom}</wfw:commentRss>
 </item>`
 }).join('\n')}

@@ -1,7 +1,15 @@
 <script setup lang="ts">
 import type FeedProps from '~/types/feed'
+import { differenceInHours } from 'date-fns'
 
 defineProps<FeedProps>()
+
+// 检查更新时间和发布时间是否有显著差异（大于24小时）
+const isTimeDiffSignificant = (updated: string, published: string) => {
+  const updatedDate = new Date(updated)
+  const publishedDate = new Date(published)
+  return differenceInHours(updatedDate, publishedDate) > 24
+}
 </script>
 
 <template>
