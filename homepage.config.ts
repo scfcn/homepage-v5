@@ -16,7 +16,7 @@ const homepageConfig = {
 	author,
 	language: 'zh-CN',
 	timezone: 'Asia/Shanghai',
-	favicon: '/favicon.ico',
+	favicon: homepageConfig.url + '/favicon.ico',
 	url: 'https://me.qxzhan.cn/',
 	blogAtom: 'https://qxzhan.cn/feed/atom/',
 	ech0Api: 'https://mm.qxzhan.cn',
