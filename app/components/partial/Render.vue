@@ -8,5 +8,10 @@ defineProps<{
 <template v-if="typeof content === 'string'">
 	{{ content }}
 </template>
-<component :is="content" v-else />
+<template v-else-if="typeof content === 'function'">
+	<component :is="content()" />
+</template>
+<template v-else>
+	<component :is="content" />
+</template>
 </template>

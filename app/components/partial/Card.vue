@@ -27,10 +27,18 @@ defineProps<CardProps>()
 	<div class="z-card-buttons">
 		<ZButton v-for="(button, buttonIndex) in buttons" v-bind="button" :key="buttonIndex" />
 	</div>
-	<!-- FIXME: 水合不匹配 -->
-	<p class="z-card-desc">
-		<ZRender :content="desc" />
-	</p>
+	<!-- 修复水合不匹配问题：将 p 标签替换为 div 标签，因为 p 标签内不能包含 div 元素 -->
+	<div class="z-card-desc">
+		<template v-if="typeof desc === 'string'">
+			{{ desc }}
+		</template>
+		<template v-else-if="typeof desc === 'function'">
+			<component :is="desc()" />
+		</template>
+		<template v-else>
+			<component :is="desc" />
+		</template>
+	</div>
 </li>
 </template>
 
