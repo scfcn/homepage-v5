@@ -16,7 +16,7 @@ const homepageConfig = {
 	author,
 	language: 'zh-CN',
 	timezone: 'Asia/Shanghai',
-	favicon: '/favicon.ico',
+	favicon: '/icon.png',
 	url: 'https://me.qxzhan.cn/',
 	blogAtom: 'https://qxzhan.cn/feed/atom/',
 	ech0Api: 'https://mm.qxzhan.cn',
@@ -26,5 +26,6 @@ const homepageConfig = {
 export const routeRules: NitroConfig['routeRules'] = {
 	'/api/avatar.png': { redirect: author.avatar },
 	'/api/icon.png': { redirect: homepageConfig.favicon },
+	'/favicon.ico': { redirect: homepageConfig.favicon },
 }
 export default homepageConfig
