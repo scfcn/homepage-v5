@@ -7,102 +7,125 @@ definePageMeta({ headerText: '一些网站' })
 
 const toolSites: Array<CardProps> = [
 	{
-		name: 'CO导航',
-		nameAlt: 'xupt-nav',
+		name: '卷邻茶叙',
+		nameAlt: 'shuoshuo',
 		buttons: [
-			{ icon: 'ph:planet-duotone', text: '访问', to: 'https://cooo.site' },
-			{ icon: 'ph:github-logo-duotone', text: 'GitHub', to: 'https://github.com/xupt-wiki/xupt-nav' },
+			{ icon: 'ph:planet-duotone', text: '访问', to: 'https://mm.qixz.cn/' },
+			{ icon: 'ph:github-logo-duotone', text: 'GitHub', to: 'https://github.com/lin-snow/Ech0' },
 		],
-		desc: '为西安邮电大学学生提供网址导航服务，于2023年2月7日开始运营，是“更适合西邮宝宝体质的网址导航”。',
+		desc: '个人说说，随感而发',
 	},
 	{
-		name: '考试时钟',
-		nameAlt: 'ExamClock',
+		name: '友链朋友圈',
+		nameAlt: 'Friend-Circle',
 		buttons: [
-			{ icon: 'ph:planet-duotone', text: '访问', to: 'https://exam.thisis.host' },
-			{ icon: 'ph:github-logo-duotone', text: 'GitHub', to: 'https://github.com/L33Z22L11/ExamClock' },
+			{ icon: 'ph:planet-duotone', text: '访问', to: 'https://fc.qixz.cn/' },
+			{ icon: 'ph:github-logo-duotone', text: 'GitHub', to: 'https://github.com/willow-god/Friend-Circle-Lite' },
 		],
-		desc: '用于宝鸡中学校内考试，可以在大屏上展示科目信息、起止时间、考试进度，支持切换年级、文理科，于2021年4月1日上线并投入使用。',
+		desc: '一个简单的友链朋友圈，用于展示友链文章动态',
 	},
 	{
-		name: '西邮Wiki',
-		nameAlt: 'xupt-wiki',
+		name: 'Gists',
+		nameAlt: 'gists',
 		buttons: [
-			{ icon: 'ph:planet-duotone', text: '访问', to: 'https://wiki.cooo.site' },
-			{ icon: 'ph:github-logo-duotone', text: 'GitHub', to: 'https://github.com/xupt-wiki/xupt-wiki' },
+			{ icon: 'ph:planet-duotone', text: '访问', to: 'https://gist.qixz.cn/all' },
+			{ icon: 'ph:github-logo-duotone', text: 'GitHub', to: 'https://github.com/thomiceli/opengist' },
 		],
-		desc: '西安邮电大学第三方公益校园生活百科，于2024年6月30立项。本人于2024年7月30日使用VitePress搭建，持续更新中。',
+		desc: '一个简单的Gists仓库，用于存储和分享代码片段',
 	},
 	{
-		name: '西邮Linux兴趣小组培养计划',
-		nameAlt: 'Plan',
+		name: 'Bing每日一图',
+		nameAlt: 'bingdailypic',
 		buttons: [
-			{ icon: 'ph:planet-duotone', text: '访问', to: 'https://plan.xiyoulinux.com' },
-			{ icon: 'ph:github-logo-duotone', text: 'GitHub', to: 'https://github.com/xiyou-linuxer/Plan' },
+			{ icon: 'ph:planet-duotone', text: '访问', to: 'https://bing.qixz.cn/' },
+			{ icon: 'ph:github-logo-duotone', text: 'GitHub', to: 'https://github.com/willow-god/daily-image' },
 		],
-		desc: '西邮Linux兴趣小组的培养计划，于2021年11月4日开源。本人于2024年3月20日使用MkDocs为此Plan构建网站，于2025年2月24日使用Nextra重构。',
+		desc: '这是一个基于 GitHub Actions 自动获取并展示 Bing 每日高清壁纸的项目,维护最近400天的壁纸',
+	},
+	{
+		name: 'NewsNow',
+		nameAlt: 'news',
+		buttons: [
+			{ icon: 'ph:planet-duotone', text: '访问', to: 'https://nn.qixz.cn/' },
+			{ icon: 'ph:github-logo-duotone', text: 'GitHub', to: 'https://github.com/ourongxing/newsnow' },
+		],
+		desc: '优雅地阅读实时热门新闻',
+	},
+	{
+		name: '青序图压',
+		nameAlt: 'picsmaller',
+		buttons: [
+			{ icon: 'ph:planet-duotone', text: '访问', to: 'https://picsm.qixz.cn/' },
+			{ icon: 'ph:github-logo-duotone', text: 'GitHub', to: 'https://github.com/joye61/pic-smaller' },
+		],
+		desc: '一个超级易于使用的在线图像压缩工具, 支持批量压缩, 压缩后图片质量无损失, 压缩率可达90%以上',
+	},
+	{
+		name: '青序快驿',
+		nameAlt: 'share',
+		buttons: [
+			{ icon: 'ph:planet-duotone', text: '访问', to: 'https://share.qixz.cn/#/' },
+			{ icon: 'ph:github-logo-duotone', text: 'GitHub', to: 'https://github.com/vastsa/FileCodeBox' },
+		],
+		desc: '一个简单的分享工具，用于分享链接、图片、文本等内容',
 	},
 
 ]
 
 const orgSites: Array<CardProps> = [
 	{
-		name: '西邮Linux兴趣小组',
-		nameAlt: 'Xiyou Linux Group',
+		name: '雾都政府市民互联网站',
+		nameAlt: 'wuicp',
 		buttons: [
-			{ icon: 'ph:planet-duotone', text: '访问', to: 'https://xiyoulinux.com' },
+			{ icon: 'ph:planet-duotone', text: '访问', to: 'https://icp.wudu.ltd/' },
 		],
-		desc: '西安邮电大学计算机学院2006年9月建立的一个兴趣小组。本人于2022年10月22日成为其中一员，于2024年3月16日使用VitePress重建官网。',
+		desc: '一种异次元中的爱好，可爱和个性的展现',
 	},
 	{
-		name: '野生技协',
-		nameAlt: 'TECHYES',
+		name: '开往',
+		nameAlt: 'travellings',
 		buttons: [
-			{ icon: 'ph:planet-duotone', text: '访问', to: 'https://thisis.host' },
+			{ icon: 'ph:planet-duotone', text: '访问', to: 'https://www.travellings.cn/' },
 		],
 		desc: () => h('div', [
-			'宝鸡中学校内的一个自发性的技术协助组织、无门槛的技术交流群，旨在信息分享、交流与公开，于2020年7月20日对外开放，多个',
-			h(ZLink, { to: 'https://thisis.host/site' }, '二级域名'),
-			'为校友提供项目部署服务。官网于2021年8月8日建立，并于2024年2月3日升级为博客。',
+			'「开往 Travellings」是一个友链接力项目，旨在通过',
+			h(ZLink, { to: 'https://www.travellings.cn/plain.html' }, () => '网络跳转'),
+			'的方式将流量引入那些鲜为人知的独立站点，从而推动网络的开放性和多元性。该项目于 2020 年 3 月 12 日诞生，灵感来源于开放的网络。',
 		]),
 	},
 	{
-		name: '邮立方',
-		nameAlt: 'Cube of Posts',
+		name: '个人博客俱乐部',
+		nameAlt: 'blogsclub',
 		buttons: [
-			{ icon: 'ph:planet-duotone', text: '访问', to: 'https://cop.cooo.site' },
+			{ icon: 'ph:planet-duotone', text: '访问', to: 'https://www.blogsclub.org/' },
 		],
 		desc: () => h('div', [
-			'西安邮电大学校内的Minecraft兴趣交流团体，',
-			h(ZLink, { to: 'https://www.mualliance.cn/' }, 'Minecraft高校联盟(MUA)'),
-			'成员，于2023年10月6日对外开放。官网于2024年1月1日建立，并于2024年2月10日升级为博客。',
+			'BlogsClub是一个独立且相互包容的个人博客俱乐部，旨在为博主们提供一个互相交流、学习和进步的空间，让博主们能够在这里共同分享彼此的经验和知识，共同进步。',
 		]),
 	},
 	{
-		name: '方块茶话会',
-		nameAlt: 'Block Tea Reception',
+		name: '揪蝉',
+		nameAlt: 'jiuchan',
 		buttons: [
-			{ icon: 'ph:planet-duotone', text: '访问', to: 'https://btr.thisis.host/' },
+			{ icon: 'ph:planet-duotone', text: '访问', to: 'https://www.jiuchan.org/' },
 		],
 		desc: () => h('div', [
-			'宝鸡中学校内的Minecraft爱好群体，由',
-			h(ZLink, { icon: 'ph:github-logo-duotone', to: 'https://github.com/guuguai/' }, '古古怪怪GuuGuai'),
-			'于2020年7月17日建立。帮助文档网站于2022年6月12日建立，并于2024年2月21日迁移。',
+			'欢迎各位独立博客创作者加入“揪蝉”，我们的博客就像是一个笔记本，偶尔想写下点什么，偶尔又想记录点什么，或者…想在这个世界留下点什么，证明我们也曾来过。我们留了千言万语，想对这个世界好好的…说上一说。',
 		]),
 	},
 	{
-		name: '相侵相碍异家人',
-		nameAlt: 'Alien Family Hub',
+		name: '信网联盟',
+		nameAlt: 'xnet',
 		buttons: [
-			{ icon: 'ph:planet-duotone', text: '访问', to: 'https://alienfamily.us.kg/' },
+			{ icon: 'ph:planet-duotone', text: '访问', to: 'https://icp.xnet.ren/' },
 		],
-		desc: 'Hexo博客交流群“糖果屋”的群友组织的Minecraft服务器，于2024年7月18日建群。2025年2月2日创建了成员列表页面。',
+		desc: '信网，互联网新一代公益服务组织,是众多信网联盟成员互助互联互利的网络组织！',
 	},
 ]
 </script>
 
 <template>
-<ZTitle>工具类站点</ZTitle>
+<ZTitle>个人站点</ZTitle>
 <ZCardList :data-list="toolSites" />
 <ZTitle>组织门户</ZTitle>
 <ZCardList :data-list="orgSites" />

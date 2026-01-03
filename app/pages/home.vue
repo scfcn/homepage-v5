@@ -23,47 +23,36 @@ const appConfig = useAppConfig()
 		<div>
 			<ZButton
 				icon="ri:file-list-3-line"
-				to="https://blog.zhilu.site/"
-				text="博客"
+				to="https://www.qixz.cn/"
+				text="青序栈"
 				primary
 			/>
 			<ZButton
 				icon="ri:github-line"
-				to="https://github.com/L33Z22L11"
+				to="https://github.com/scfcn/"
 				text="GitHub"
 			/>
 		</div>
 	</ZField>
 	<ZField label="介绍">
 		<p>
-			<ZLink to="https://github.com/xiyou-linuxer">西邮 Linux 兴趣小组</ZLink>
-			成员，Windows 11 和 Arch Linux 用户。
+			<ZLink to="https://www.travellings.cn/">开往</ZLink>
+			成员，Windows 11 和 Android 用户。
 		</p>
 	</ZField>
 	<ZField label="近期活动">
 		<p>
-			2024 年 7 月完善
-			<ZLink to="https://wiki.cooo.site/">西邮Wiki</ZLink>，8 月使用 Nuxt Content 重构了
-			<ZLink to="https://blog.zhilu.site/">个人博客</ZLink>，2025 年 3 月重构了西邮 Linux 兴趣小组博客后端，近期正在寻找前端秋招。
+			2025 年 11 月底数据库由mysql 5.7更换至mariadb 10.6，优化博客速度
+			<ZLink to="https://www.qixz.cn/">青序栈</ZLink>2025 年 11月初部署ech0说说项目
+			<ZLink to="https://mm.qixz.cn/">卷邻茶叙</ZLink>
 		</p>
 	</ZField>
 	<ZField label="关于主页">
 		<p>
-			自2024年6月1日开始重构，目前缓慢修缮中。
+			fork自zhilu大佬<ZLink to="https://github.com/L33Z22L11/homepage-v5" icon="ri:github-line">L33Z22L11/homepage-v5</ZLink>
 		</p>
 		<p>
-			感谢<ZBadge link="https://github.com/KazariEX">
-				KazariEX
-			</ZBadge><ZBadge link="https://github.com/isYangs">
-				isYangs
-			</ZBadge>等众多朋友为个人主页提供帮助。
-			<br>
-			主页开源在
-			<ZLink to="https://github.com/L33Z22L11/homepage-v5" icon="ri:github-line">L33Z22L11/homepage-v5</ZLink>
-			上。
-		</p>
-		<p>
-			欢迎使用、参考样式：<br>
+			同款主页的友友们：<br>
 			<ZBadge v-for="item in appConfig.fork" :key="item.link" v-bind="item" />
 		</p>
 	</ZField>

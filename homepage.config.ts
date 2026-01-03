@@ -3,22 +3,23 @@
 import type { NitroConfig } from 'nitropack'
 
 const author = {
-	name: '纸鹿本鹿',
-	avatar: 'https://wsrv.nl/?url=github.com/L33Z22L11.png',
-	email: 'hi@zhilu.cyou',
-	homepage: 'https://www.zhilu.site/',
+	name: '筱序二十',
+	avatar: '/avatar.avif',
+	email: 'qxbk@qq.com',
+	homepage: 'https://me.qixz.cn/',
 }
 
 const homepageConfig = {
-	title: '纸鹿 (@L33Z22L11)',
-	subtitle: '纸鹿至麓不知路，支炉制露不止漉',
-	description: '纸鹿（也称作纸鹿本鹿、Zhilu、L33Z22L11）是一名开源爱好者，这是纸鹿的个人主页。他有一个博客「纸鹿摸鱼处」，记录了他在生活和技术学习中的点滴经历，充满启发与思考。他的个人主页和博客界面简洁美观，内容丰富实用，人气互动活跃，涵盖了编程、生活、学习等多个领域，为读者提供了卓越的阅读体验。',
+	title: '筱序二十 (栈主)',
+	subtitle: '青序入栈云作岸，筱风二十月盈窗',
+	description: '筱序二十（栈主 / scfcn）是一位活跃于 GitHub 与博客圈的独立开发者，热衷开源与云原生。他维护的个人站 https://www.qixz.cn/ 收录了从 Web 全栈、容器化到 DevOps 的实战笔记，也分享旅行与摄影的随想。主页延续「纸鹿」极简风格，聚焦深度技术解析与轻量生活记录，为同路人提供可 fork 的代码与可复用的经验。',
 	author,
 	language: 'zh-CN',
 	timezone: 'Asia/Shanghai',
-	favicon: '/icon.png',
-	url: 'https://www.zhilu.site/',
-	blogAtom: 'https://blog.zhilu.site/atom.xml',
+	favicon: '/avatar.avif',
+	url: 'https://me.qixz.cn/',
+	blogAtom: 'https://www.qixz.cn/atom.xml',
+	ech0Api: 'https://mm.qixz.cn',
 }
 
 // https://nitro.build/config#routerules

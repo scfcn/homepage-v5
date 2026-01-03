@@ -4,29 +4,29 @@ definePageMeta({ headerText: '参与的开源项目' })
 
 const projects = [
 	{
-		title: 'blog-v3',
-		github: 'L33Z22L11/blog-v3',
-		description: '个人博客网站，收获 100 star，被多人使用',
+		title: 'Rainyun-Qiandao',
+		github: 'scfcn/Rainyun-Qiandao',
+		description: '免费雨云自动签到脚本，发布一月受到数十位用户使用，目前已添加通知功能',
 	},
 	{
-		title: 'homepage-v5',
-		github: 'L33Z22L11/homepage-v5',
-		description: '个人首页，使用 Nuxt.js 构建',
+		title: 'AcgAPI',
+		github: 'scfcn/acgapi',
+		description: '依赖于EO PAGE的随机图片API',
 	},
 	{
-		title: 'hexo-theme-stellar',
-		github: 'xaoxuu/hexo-theme-stellar',
-		description: '简洁优雅的 Hexo 主题',
+		title: 'UA-G',
+		github: 'scfcn/ua-g',
+		description: '用于快速生成符合各种浏览器、操作系统和设备类型的User-Agent字符串',
 	},
 	{
-		title: 'blog-feed',
-		github: 'xiyou-linuxer/blog-feed',
-		description: '使用 Nitro + MongoDB 搭建的博客订阅聚合 API',
+		title: 'WuICP',
+		github: 'scfcn/WuICP',
+		description: '虚拟备案系统',
 	},
 	{
-		title: 'zhilu-cv',
-		github: 'L33Z22L11/zhilu-cv',
-		description: '个人简历，使用 Nuxt.js 构建',
+		title: 'domain-card',
+		github: 'scfcn/domain-card',
+		description: '域名卡片，用于展示域名信息',
 	},
 ]
 </script>

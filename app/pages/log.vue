@@ -1,27 +1,21 @@
 <script setup lang="ts">
-import { ZhiluIcon, ZhiluIconOld } from '#components'
+import { ZhiluIcon } from '#components'
 
 useHead({ title: '日志' })
 definePageMeta({ headerText: '互联网上的活动记录' })
 
 const timeline = {
-	'2025-07-26': h('span', ['博客：迁移 Nuxt Content 3，并更换域名 ', h('code', 'zhilu.site')]),
-	'2025-05-04': '工作：第一份前端实习',
-	'2025-03-11': '简历：使用 Nuxt.js 开发',
-	'2024-08-11': '博客：使用 Nuxt Content 重构',
-	'2024-06-01': '个人网站：使用 Nuxt.js 重构',
-	'2024-02-17': '个人网站：使用 VitePress 重写',
-	'2023-05-24': '博客：使用 Hexo 构建纸鹿摸鱼处',
-	'2022-10-12': '个人网站：使用原生前端重写',
-	'2021-09-24': '微信公众号：纸鹿本鹿',
-	'2020-08-10': h('span', ['个人网站：更换域名 ', h('code', 'zhilu.cyou')]),
-	'2019-12-27': 'Slogan：纸鹿至麓不知路，支炉制露不止漉',
-	'2019-07-19': '个人网站：使用 Jekyll，发布第一篇文章',
-	'2019-05-24': h('span', ['个人网站：购买域名 ', h('code', 'zhilu.fun')]),
-	'2019-03-01': h('span', ['Logo：', h(ZhiluIcon)]),
-	'2019-02-06': 'Slogan：纸鹿山行云潜日，日潜云行山路止',
-	'2017-09-08': h('span', ['Logo：', h(ZhiluIconOld), ' PaperyDeer']),
-	'2016-06-28': h('span', ['开始使用昵称 ', h('code', '纸鹿君_L33Z22L11'), ' 在互联网上活跃']),
+	'2026-01-02': '全域迁移至 qixz.cn',
+	'2025-07-13': h('span', ['博客：迁移 Typecho，并更换域名 ', h('code', 'qxzhan.cn')]),
+	'2025-07-03': h('span', ['Logo：', h(ZhiluIcon)]),
+	'2024-12-27': 'Slogan：须知少时凌云志，曾许人间第一流',
+	'2025-07-30': '博客一周年',
+	'2025-05-15': '创立信网联盟',
+	'2024-09-24': '创建雾都虚拟城市',
+	'2024-07-23': '个人网站：使用 Hexo，发布第一篇文章',
+	'2024-07-17': h('span', ['个人网站：购买域名 ', h('code', 'scfc.top')]),
+	'2024-07-02': 'Slogan：屠龙少年终成恶龙',
+	'2024-06-23': h('span', ['开始使用昵称 ', h('code', 'SCFC'), ' 在互联网上活跃']),
 }
 </script>
 
