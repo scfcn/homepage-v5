@@ -6,7 +6,22 @@ const projects = [
 	{
 		title: 'Rainyun-Qiandao',
 		github: 'scfcn/Rainyun-Qiandao',
-		description: '免费雨云自动签到脚本，发布一月受到数十位用户使用，目前已添加通知功能',
+		description: '免费雨云自动签到脚本，发布后受到上百位用户使用',
+	},
+	{
+		title: 'Static-mirrors',
+		github: 'scfcn/static-mirrors',
+		description: '静态文件镜像，用于加速静态文件的访问',
+	},
+	{
+		title: 'cfcn',
+		github: 'scfcn/cfcn',
+		description: '信网CF优选项目',
+	},
+	{
+		title: 'Xnetcdnweb',
+		github: 'scfcn/scdnweb',
+		description: '信网CDN前端主页',
 	},
 	{
 		title: 'AcgAPI',

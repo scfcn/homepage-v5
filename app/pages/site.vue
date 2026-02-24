@@ -7,6 +7,14 @@ definePageMeta({ headerText: '一些网站' })
 
 const toolSites: Array<CardProps> = [
 	{
+		name: '云雾图驿',
+		nameAlt: 'IMGBED',
+		buttons: [
+			{ icon: 'ph:planet-duotone', text: '访问', to: 'https://img.wudu.ltd/' },
+		],
+		desc: '云雾图驿是专注于「免费+高速」的新一代图片托管服务平台，为博主及开发者提供稳定、高效的图片上传与分享解决方案。支持JPG/PNG/GIF/WebP等主流格式。',
+	},
+	{
 		name: '卷邻茶叙',
 		nameAlt: 'shuoshuo',
 		buttons: [
@@ -59,15 +67,6 @@ const toolSites: Array<CardProps> = [
 			{ icon: 'ph:github-logo-duotone', text: 'GitHub', to: 'https://github.com/joye61/pic-smaller' },
 		],
 		desc: '一个超级易于使用的在线图像压缩工具, 支持批量压缩, 压缩后图片质量无损失, 压缩率可达90%以上',
-	},
-	{
-		name: '青序快驿',
-		nameAlt: 'share',
-		buttons: [
-			{ icon: 'ph:planet-duotone', text: '访问', to: 'https://share.qixz.cn/#/' },
-			{ icon: 'ph:github-logo-duotone', text: 'GitHub', to: 'https://github.com/vastsa/FileCodeBox' },
-		],
-		desc: '一个简单的分享工具，用于分享链接、图片、文本等内容',
 	},
 
 ]
