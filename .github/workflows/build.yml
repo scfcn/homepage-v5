@@ -1,0 +1,59 @@
+name: 构建并发布产物
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+
+      - name: 设置 pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: 设置 Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - name: 安装依赖
+        run: pnpm install --frozen-lockfile
+
+      - name: 校验环境
+        run: |
+          NUXT_IMAGE_PROVIDER=ipx \
+          COREPACK_INTEGRITY_KEYS=0 \
+          echo "环境变量已就绪"
+
+      - name: 构建静态站点
+        run: pnpm generate
+
+      - name: 准备发布分支
+        run: |
+          mkdir -p build
+          cp -r .output/public/. build/
+          touch build/.nojekyll
+
+      - name: 提交产物到 build 分支
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
+          publish_branch: build
+          user_name: github-actions[bot]
+          user_email: 41898282+github-actions[bot]@users.noreply.github.com
+          commit_message: build: ${{ github.sha }}
+          force_orphan: true
