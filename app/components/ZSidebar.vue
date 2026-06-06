@@ -28,7 +28,6 @@ const sidebarStore = useSidebarStore()
 	</nav>
 	<footer class="aside-footer">
 		<ZThemeToggle />
-		<ZRender v-for="(item, index) in appConfig.footer" :key="index" :content="item" />
 	</footer>
 </aside>
 <Transition>

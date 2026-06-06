@@ -14,6 +14,7 @@ useSeoMeta({
 	<main>
 		<NuxtPage />
 	</main>
+	<ZFooter />
 </div>
 </template>
 
