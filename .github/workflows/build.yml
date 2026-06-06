@@ -55,5 +55,5 @@ jobs:
           publish_branch: build
           user_name: github-actions[bot]
           user_email: 41898282+github-actions[bot]@users.noreply.github.com
-          commit_message: build: ${{ github.sha }}
+          commit_message: "build: ${{ github.sha }}"
           force_orphan: true
