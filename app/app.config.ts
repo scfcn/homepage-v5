@@ -13,7 +13,7 @@ export default defineAppConfig({
 		h('a', { href: 'https://beian.miit.gov.cn', target: '_blank', rel: 'noopener nofollow' }, '滇ICP备2026003487号'),
 		h('a', { href: 'https://beian.mps.gov.cn/#/query/webSearch?code=53310302000157', target: '_blank', rel: 'noopener nofollow' }, [
 			h('img', { src: '/mps.png', alt: '网安图标', class: 'beian-icon' }),
-			'网安备案',
+			'网安备案中',
 		]),
 	],
 
