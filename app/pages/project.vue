@@ -6,43 +6,18 @@ const projects = [
 	{
 		title: 'Rainyun-Qiandao',
 		github: 'scfcn/Rainyun-Qiandao',
-		description: '免费雨云自动签到脚本，发布后受到上百位用户使用',
+		description: '雨云签到自动化技术研究，发布后受到上百位用户学习',
 	},
 	{
-		title: 'Static-mirrors',
-		github: 'scfcn/static-mirrors',
-		description: '静态文件镜像，用于加速静态文件的访问',
-	},
-	{
-		title: 'cfcn',
-		github: 'scfcn/cfcn',
-		description: '信网CF优选项目',
-	},
-	{
-		title: 'Xnetcdnweb',
-		github: 'scfcn/scdnweb',
-		description: '信网CDN前端主页',
-	},
-	{
-		title: 'AcgAPI',
-		github: 'scfcn/acgapi',
-		description: '依赖于EO PAGE的随机图片API',
+		title: 'StarCDN',
+		github: 'scfcn/StarCDN',
+		description: '前端公共库加速服务',
 	},
 	{
 		title: 'UA-G',
 		github: 'scfcn/ua-g',
 		description: '用于快速生成符合各种浏览器、操作系统和设备类型的User-Agent字符串',
-	},
-	{
-		title: 'WuICP',
-		github: 'scfcn/WuICP',
-		description: '虚拟备案系统',
-	},
-	{
-		title: 'domain-card',
-		github: 'scfcn/domain-card',
-		description: '域名卡片，用于展示域名信息',
-	},
+	}
 ]
 </script>
 

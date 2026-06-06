@@ -10,7 +10,7 @@ const toolSites: Array<CardProps> = [
 		name: '云雾图驿',
 		nameAlt: 'IMGBED',
 		buttons: [
-			{ icon: 'ph:planet-duotone', text: '访问', to: 'https://img.wudu.ltd/' },
+			{ icon: 'ph:planet-duotone', text: '访问', to: 'https://img.wuxit.cn/' },
 		],
 		desc: '云雾图驿是专注于「免费+高速」的新一代图片托管服务平台，为博主及开发者提供稳定、高效的图片上传与分享解决方案。支持JPG/PNG/GIF/WebP等主流格式。',
 	},
@@ -49,37 +49,10 @@ const toolSites: Array<CardProps> = [
 			{ icon: 'ph:github-logo-duotone', text: 'GitHub', to: 'https://github.com/willow-god/daily-image' },
 		],
 		desc: '这是一个基于 GitHub Actions 自动获取并展示 Bing 每日高清壁纸的项目,维护最近400天的壁纸',
-	},
-	{
-		name: 'NewsNow',
-		nameAlt: 'news',
-		buttons: [
-			{ icon: 'ph:planet-duotone', text: '访问', to: 'https://nn.qixz.cn/' },
-			{ icon: 'ph:github-logo-duotone', text: 'GitHub', to: 'https://github.com/ourongxing/newsnow' },
-		],
-		desc: '优雅地阅读实时热门新闻',
-	},
-	{
-		name: '青序图压',
-		nameAlt: 'picsmaller',
-		buttons: [
-			{ icon: 'ph:planet-duotone', text: '访问', to: 'https://picsm.qixz.cn/' },
-			{ icon: 'ph:github-logo-duotone', text: 'GitHub', to: 'https://github.com/joye61/pic-smaller' },
-		],
-		desc: '一个超级易于使用的在线图像压缩工具, 支持批量压缩, 压缩后图片质量无损失, 压缩率可达90%以上',
-	},
-
+	}
 ]
 
 const orgSites: Array<CardProps> = [
-	{
-		name: '雾都政府市民互联网站',
-		nameAlt: 'wuicp',
-		buttons: [
-			{ icon: 'ph:planet-duotone', text: '访问', to: 'https://icp.wudu.ltd/' },
-		],
-		desc: '一种异次元中的爱好，可爱和个性的展现',
-	},
 	{
 		name: '开往',
 		nameAlt: 'travellings',
@@ -111,15 +84,7 @@ const orgSites: Array<CardProps> = [
 		desc: () => h('div', [
 			'欢迎各位独立博客创作者加入“揪蝉”，我们的博客就像是一个笔记本，偶尔想写下点什么，偶尔又想记录点什么，或者…想在这个世界留下点什么，证明我们也曾来过。我们留了千言万语，想对这个世界好好的…说上一说。',
 		]),
-	},
-	{
-		name: '信网联盟',
-		nameAlt: 'xnet',
-		buttons: [
-			{ icon: 'ph:planet-duotone', text: '访问', to: 'https://icp.xnet.ren/' },
-		],
-		desc: '信网，互联网新一代公益服务组织,是众多信网联盟成员互助互联互利的网络组织！',
-	},
+	}
 ]
 </script>
 

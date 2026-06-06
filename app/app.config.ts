@@ -10,25 +10,15 @@ export default defineAppConfig({
 
 	footer: [
 		`© ${new Date().getFullYear()} 筱序二十`,
-		h('a', { href: 'https://icp.gov.moe/?keyword=20256101', target: '_blank', rel: 'noopener nofollow' }, '萌ICP备20256101号'),
+		h('a', { href: 'https://beian.miit.gov.cn', target: '_blank', rel: 'noopener nofollow' }, '滇ICP备2026003487号-4'),
 	],
 
 	// 用于在主页展示下游引用
 	fork: [
 		{
-			img: 'https://api-space.tnxg.top/avatar?s=qq',
-			link: 'https://tnxg.top/',
-			text: '天翔TNXG',
-		},
-		{
 			img: 'https://q1.qlogo.cn/g?b=qq&nk=1043865083&s=2',
 			link: 'https://www.xlenco.top/',
 			text: 'Xlenco',
-		},
-		{
-			img: 'https://www.mugzx.top/icon.png',
-			link: 'https://www.mugzx.top/',
-			text: 'Mugzx',
 		},
 		{
 			img: 'https://cn.cravatar.com/avatar/1F6C8947D35A8186A1647009BA8BC5F2?size=256',
@@ -39,16 +29,7 @@ export default defineAppConfig({
 			img: 'https://q1.qlogo.cn/g?b=qq&nk=3310149631&s=2',
 			link: 'https://gr114.com/',
 			text: 'GreenRoc',
-		},
-		{
-			img: 'https://q.qlogo.cn/g?b=qq&nk=2907713872&s=2',
-			text: '筱序二十',
-		},
-		{
-			img: 'https://file.furrys.im/img/logo.webp',
-			link: 'https://www.furrys.im/',
-			text: 'lpcay',
-		},
+		}
 	],
 
 	nav: [
@@ -68,7 +49,6 @@ export default defineAppConfig({
 				{ icon: 'ri:qq-line', text: '群: 665751334', url: 'https://qm.qq.com/q/gOTblcp6mW' },
 				{ icon: 'ri:mail-line', text: 'qxbk@qq.com', url: 'mailto:qxbk@qq.com' },
 				{ icon: 'ri:github-line', text: 'Github', url: 'https://github.com/scfcn' },
-				{ icon: 'ri:telegram-line', text: 'Telegram', url: 'https://t.me/qxuzh' },
 			],
 		},
 	] satisfies Nav,

@@ -4,7 +4,7 @@ import type { NitroConfig } from 'nitropack'
 
 const author = {
 	name: '筱序二十',
-	avatar: 'https://me.qixz.cn/avatar.avif',
+	avatar: '/avatar.avif',
 	email: 'qxbk@qq.com',
 	homepage: 'https://me.qixz.cn/',
 }
@@ -16,7 +16,7 @@ const homepageConfig = {
 	author,
 	language: 'zh-CN',
 	timezone: 'Asia/Shanghai',
-	favicon: 'https://me.qixz.cn/avatar.avif',
+	favicon: '/avatar.avif',
 	url: 'https://me.qixz.cn/',
 	blogAtom: 'https://www.qixz.cn/atom.xml',
 	ech0Api: 'https://mm.qixz.cn',

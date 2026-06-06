@@ -5,6 +5,9 @@ useHead({ title: '日志' })
 definePageMeta({ headerText: '互联网上的活动记录' })
 
 const timeline = {
+	'2026-06-16': '中考',
+	'2026-05-30': 'StarCDN：前端公共库加速服务发布',
+	'2026-05-14': '进行ICP备案',
 	'2026-01-02': '全域迁移至 qixz.cn',
 	'2025-07-13': h('span', ['博客：迁移 Typecho，并更换域名 ', h('code', 'qxzhan.cn')]),
 	'2025-07-03': h('span', ['Logo：', h(ZhiluIcon)]),
