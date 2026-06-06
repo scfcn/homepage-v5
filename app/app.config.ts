@@ -29,7 +29,7 @@ export default defineAppConfig({
 			img: 'https://q1.qlogo.cn/g?b=qq&nk=3310149631&s=2',
 			link: 'https://gr114.com/',
 			text: 'GreenRoc',
-		}
+		},
 	],
 
 	nav: [

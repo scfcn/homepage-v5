@@ -17,7 +17,7 @@ const projects = [
 		title: 'UA-G',
 		github: 'scfcn/ua-g',
 		description: '用于快速生成符合各种浏览器、操作系统和设备类型的User-Agent字符串',
-	}
+	},
 ]
 </script>
 

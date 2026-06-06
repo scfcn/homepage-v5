@@ -49,7 +49,7 @@ const toolSites: Array<CardProps> = [
 			{ icon: 'ph:github-logo-duotone', text: 'GitHub', to: 'https://github.com/willow-god/daily-image' },
 		],
 		desc: '这是一个基于 GitHub Actions 自动获取并展示 Bing 每日高清壁纸的项目,维护最近400天的壁纸',
-	}
+	},
 ]
 
 const orgSites: Array<CardProps> = [
@@ -84,7 +84,7 @@ const orgSites: Array<CardProps> = [
 		desc: () => h('div', [
 			'欢迎各位独立博客创作者加入“揪蝉”，我们的博客就像是一个笔记本，偶尔想写下点什么，偶尔又想记录点什么，或者…想在这个世界留下点什么，证明我们也曾来过。我们留了千言万语，想对这个世界好好的…说上一说。',
 		]),
-	}
+	},
 ]
 </script>
 
