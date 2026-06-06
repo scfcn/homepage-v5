@@ -10,10 +10,10 @@ export default defineAppConfig({
 
 	footer: [
 		`© ${new Date().getFullYear()} 筱序二十 - 新尘（芒市）网络科技有限公司`,
-		h('a', { href: 'https://beian.miit.gov.cn', target: '_blank', rel: 'noopener nofollow' }, '滇ICP备2026003487号-4'),
-		h('a', { href: '', target: '_blank', rel: 'noopener nofollow' }, [
+		h('a', { href: 'https://beian.miit.gov.cn', target: '_blank', rel: 'noopener nofollow' }, '滇ICP备2026003487号'),
+		h('a', { href: 'https://beian.mps.gov.cn/#/query/webSearch?code=53310302000157', target: '_blank', rel: 'noopener nofollow' }, [
 			h('img', { src: '/mps.png', alt: '网安图标', class: 'beian-icon' }),
-			'网安备案中',
+			'网安备案',
 		]),
 	],
 
